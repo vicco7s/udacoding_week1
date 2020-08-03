@@ -1,6 +1,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:udacoding_week1/signup.dart';
 
 class LoginPage extends StatelessWidget {
 
@@ -45,7 +46,7 @@ class LoginPage extends StatelessWidget {
                                 borderSide: BorderSide(color: Colors.black)
                             ),
                             focusedBorder: OutlineInputBorder(
-                              borderSide: BorderSide(color: Colors.black),
+                              borderSide: BorderSide(color: Colors.blue),
                               borderRadius: BorderRadius.circular(40.0),
                             )
                         ),
@@ -73,7 +74,7 @@ class LoginPage extends StatelessWidget {
                                 borderSide: BorderSide(color: Colors.black)
                             ),
                             focusedBorder: OutlineInputBorder(
-                              borderSide: BorderSide(color: Colors.black),
+                              borderSide: BorderSide(color: Colors.blue),
                               borderRadius: BorderRadius.circular(40.0),
                             )
                         ),
@@ -90,16 +91,32 @@ class LoginPage extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        GestureDetector(
-                          onTap: () {},
+                        Expanded(
                           child: Container(
-                            padding: EdgeInsets.all(10.0),
-                            decoration: BoxDecoration(
-                              color: Colors.black,
+                            padding: EdgeInsets.all(5.0),
+                            child: CupertinoButton(
+                              color: Colors.blue,
+                              onPressed: (){},
+                                  child: Text(
+                                    'Login',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 20,
+                                    ),
+                              ),
                             ),
-                            child: Center(
+                          ),
+                        ),
+                        Expanded(
+                          child: Container(
+                            padding: EdgeInsets.all(5.0),
+                            child: CupertinoButton(
+                              color: Colors.green,
+                              onPressed: (){
+                                Navigator.push(context, CupertinoPageRoute(builder: (context) => SignInPage() ));
+                              },
                               child: Text(
-                                'Login',
+                                'Signup',
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 20,
@@ -108,8 +125,6 @@ class LoginPage extends StatelessWidget {
                             ),
                           ),
                         ),
-                        SizedBox(width: 20,),
-
                       ],
                     )
 
