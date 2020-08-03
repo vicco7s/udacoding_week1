@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 
 class SignInPage extends StatelessWidget {
 
@@ -117,9 +116,12 @@ class SignInPage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Container(
-                            padding: EdgeInsets.all(5.0),
-                            child: CupertinoButton(
-                              color: Colors.green,
+                            padding: EdgeInsets.all(10.0),
+                            decoration: BoxDecoration(
+                                color: Colors.green,
+                                borderRadius: BorderRadius.circular(15)
+                            ),
+                            child: FlatButton(
                               onPressed: (){
                                 Navigator.pop(context);
                               },

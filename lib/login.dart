@@ -91,11 +91,14 @@ class LoginPage extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Expanded(
-                          child: Container(
+                        Container(
                             padding: EdgeInsets.all(5.0),
-                            child: CupertinoButton(
-                              color: Colors.blue,
+                            decoration: BoxDecoration(
+                                color: Colors.blue,
+                                borderRadius: BorderRadius.circular(15)
+                            ),
+                            child: FlatButton(
+
                               onPressed: (){},
                                   child: Text(
                                     'Login',
@@ -105,13 +108,15 @@ class LoginPage extends StatelessWidget {
                                     ),
                               ),
                             ),
-                          ),
                         ),
-                        Expanded(
-                          child: Container(
+                          SizedBox(width: 15,),
+                          Container(
                             padding: EdgeInsets.all(5.0),
-                            child: CupertinoButton(
-                              color: Colors.green,
+                            decoration: BoxDecoration(
+                                color: Colors.green,
+                              borderRadius: BorderRadius.circular(15)
+                            ),
+                            child: FlatButton(
                               onPressed: (){
                                 Navigator.push(context, CupertinoPageRoute(builder: (context) => SignInPage() ));
                               },
@@ -123,7 +128,6 @@ class LoginPage extends StatelessWidget {
                                 ),
                               ),
                             ),
-                          ),
                         ),
                       ],
                     )
